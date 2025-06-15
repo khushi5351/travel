@@ -7,66 +7,21 @@ body, html {
 
 /* Navbar styles */
 .transparent-navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 10;
-  background-color: rgba(0, 0, 0, 0.4); /* Transparent dark */
+  background-color: rgba(0, 0, 0, 0.3); /* semi-transparent black */
+  backdrop-filter: blur(4px); /* optional blur effect */
+  transition: background-color 0.3s ease;
+}
+
+.transparent-navbar .navbar-brand h1,
+.transparent-navbar .tagline,
+.transparent-navbar .nav-link {
+  color: #fff;
+}
+
+.transparent-navbar .btn-primary {
+  background-color: #ff6600;
+  border: none;
   color: white;
-  padding: 15px 0;
-}
-
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 20px;
-}
-
-.logo {
-  font-size: 1.8rem;
-  margin: 0;
-}
-
-.tagline {
-  font-size: 0.9rem;
-  margin: 0;
-}
-
-.nav-links a {
-  color: white;
-  margin-left: 20px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.book-btn {
-  background-color: #ff5e57;
-  padding: 6px 12px;
-  border-radius: 5px;
-}
-
-.book-btn:hover {
-  background-color: #ff3b3b;
-}
-.brand {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.logo {
-  margin: 0;
-  font-size: 1.8rem;
-  color: white;
-}
-
-.tagline {
-  margin: 0;
-  font-size: 0.9rem;
-  color: #ddd;
 }
 
 
@@ -346,7 +301,6 @@ body, html {
 }
 
 /* footer */
-
 .footer {
   background-color: #222;
   color: #ddd;
@@ -356,10 +310,17 @@ body, html {
 
 .footer-container {
   display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 124px;
-    justify-content: center;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 60px;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.footer-info,
+.footer-social {
+  min-width: 250px;
 }
 
 .footer-info h3 {
@@ -381,7 +342,7 @@ body, html {
 
 .social-icons {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 15px;
   margin-top: 10px;
 }
@@ -401,5 +362,25 @@ body, html {
   padding-top: 15px;
   font-size: 0.9rem;
   color: #aaa;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .footer-info,
+  .footer-social {
+    width: 100%;
+    max-width: 400px;
+  }
 }
 
