@@ -84,7 +84,7 @@ body, html {
     object-fit: cover;
     opacity: 0;
     transition: opacity 1s ease-in-out;
-    margin-top: 60px;
+    /* margin-top: 60px; */
   }
 
   .slider-container img.active {
@@ -116,6 +116,7 @@ body, html {
     color: #f0f0f0;
     font-size: 1.2rem;
     margin-bottom: 20px;
+     text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
   }
 
   .play-button {
@@ -129,7 +130,7 @@ body, html {
     border-radius: 50px;
     transition: background 0.3s;
      color: #ffffff; /* Button text */
-  background: rgba(255, 255, 255, 0.2);
+  background: black;
 
   }
 
@@ -148,40 +149,68 @@ body, html {
     border-radius: 50%;
     margin-right: 10px;
   }
-    
-/* Video section styles */
-/* .video-section {
-  position: relative;
-  height:95vh;
-  overflow: hidden;
-}
-
-.background-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.video-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 30px 20px;
-  border-radius: 10px;
-}
-.video-overlay h2{
-transition-duration: 10ms;
-} */
+ 
 
 .modal {
   margin-top: 60px;
 }
-    /* card css */
-    /* Packages Section */
+   
+@media (max-width: 992px) {
+  .slide-content {
+    padding: 20px;
+    left: 5%;
+    max-width: 90%;
+  }
+
+  .slide-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .slide-content p {
+    font-size: 1rem;
+  }
+
+  .icon-button {
+    width: 26px;
+    height: 26px;
+    font-size: 0.9rem;
+  }
+
+  .play-button {
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .slide-content {
+    padding: 15px;
+    top: 55%;
+    left: 5%;
+    max-width: 95%;
+  }
+
+  .slide-content h1 {
+    font-size: 1.7rem;
+  }
+
+  .slide-content p {
+    font-size: 0.95rem;
+  }
+
+  .play-button {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+
+  .icon-button {
+    width: 24px;
+    height: 24px;
+    font-size: 0.8rem;
+    margin-right: 8px;
+  }
+}
+
+/* Packages Section */
 .packages {
   padding: 50px 20px;
   background-color: #f8f9fa;
@@ -344,101 +373,61 @@ transition-duration: 10ms;
 }
 
 /* contact-page */
-
 .contact-section {
-  padding: 60px 20px;
-  background-color: #f0f4f8;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.contact-container {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1000px;
-  margin: 0 auto;
-  background-color: #ffffff;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  border-radius: 15px;
-  overflow: hidden;
-}
-
-.contact-image {
-  flex: 1 1 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-
-.contact-image img {
-  width: 90%;
-  height: 90%;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-
-.contact-form {
-  flex: 1 1 400px;
-  padding: 40px;
-}
-
-.contact-form h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #004080;
-  text-align: center;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 14px 16px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
+  background: #fff;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  font-size: 1rem;
-  transition: border-color 0.3s ease;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #007bff;
-  outline: none;
+.contact-info-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.contact-form button {
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* Default stacking for mobile */
+.contact-form-col,
+.contact-info-col {
   width: 100%;
-  background-color: #007bff;
-  color: #fff;
-  padding: 14px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-.contact-form button:hover {
-  background-color: #0056b3;
+/* Custom widths for ≥992px (large screens) */
+@media (min-width: 992px) {
+  .contact-form-col {
+    width: 60%;
+  }
+
+  .contact-info-col {
+    width: 40%;
+  }
 }
 
-/* Responsive design */
+/* Custom padding for ≤768px (medium and down) */
 @media (max-width: 768px) {
-  .contact-container {
-    flex-direction: column;
+  .contact-form-col,
+  .contact-info-col {
+    padding: 1.5rem !important;
   }
 
-  .contact-image,
-  .contact-form {
-    max-width: 100%;
-  }
-
-  .contact-form {
-    padding: 30px 20px;
+  .contact-form-col {
+    border-right: none !important;
+    border-bottom: 2px solid #ccc !important;
   }
 }
+
+
 
 /* footer */
 .footer {

@@ -13,11 +13,11 @@
 <body>
 
   <header>
-    <nav class="navbar navbar-expand-lg  sticky-top">
+    <nav class="navbar navbar-expand-lg  sticky-top navbar-dark bg-dark">
       <div class="container">
         <a class="navbar-brand d-flex flex-column" href="#">
           <h1 class="m-0 logo">Grand Tour</h1>
-         
+
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
@@ -46,32 +46,21 @@
     </nav>
   </header>
 
-  <!-- <section class="video-section" id="home">
-    <video autoplay muted loop playsinline class="background-video">
-      <source src="https://videos.pexels.com/video-files/15654897/15654897-hd_1920_1080_30fps.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <div class="video-overlay">
-      <h2>Explore the World with Us</h2>
-       <small class="tagline">Your Gateway to Adventure</small>
-      <p>Unforgettable journeys start here.</p>
-    </div>
-  </section> -->
-<div class="slider-container">
-  <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?fm=jpg&q=60&w=3000" class="active">
-  <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?fm=jpg&q=60&w=3000">
-  <img src="https://lp-cms-production.imgix.net/2025-03/Shutterstock2314760055.jpg">
+  <div class="slider-container" id="home">
+    <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?fm=jpg&q=60&w=3000" class="active">
+    <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?fm=jpg&q=60&w=3000">
+    <img src="https://lp-cms-production.imgix.net/2025-03/Shutterstock2314760055.jpg">
 
-  <!-- Overlay Text Content -->
-  <div class="slide-content">
-    <h1>It's a Big World Out There, Go Explore</h1>
-    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-    <a href="https://www.youtube.com/watch?v=5n-e6lOhVq0" target="_blank" class="play-button">
-      <span class="icon-button">▶</span>
-      <span class="caption">Watch Video</span>
-    </a>
+    <!-- Overlay Text Content -->
+    <div class="slide-content">
+      <h1>It's a Big World Out There, Go Explore</h1>
+      <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+      <a href="https://www.youtube.com/watch?v=5n-e6lOhVq0" target="_blank" class="play-button">
+        <span class="icon-button">▶</span>
+        <span class="caption">Watch Video</span>
+      </a>
+    </div>
   </div>
-</div>
 
 
   <!-- packages -->
@@ -87,9 +76,9 @@
           <h3>Royal Rajasthan</h3>
           <p>Explore majestic forts, vibrant bazaars, and desert safaris in Jaipur, Udaipur, and Jaisalmer.</p>
           <p class="price">₹28,000</p>
-   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">
-      Book Now
-    </button>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">
+            Book Now
+          </button>
 
         </div>
       </div>
@@ -101,9 +90,9 @@
           <h3>Goa Getaway</h3>
           <p>Relax on sun-kissed beaches, enjoy thrilling water sports, and vibrant nightlife in Goa.</p>
           <p class="price">₹22,500</p>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">
-      Book Now
-    </button>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">
+            Book Now
+          </button>
 
         </div>
       </div>
@@ -115,9 +104,9 @@
           <h3>Divine Dwarka</h3>
           <p>Visit one of India’s holiest cities with temple tours and peaceful coastal experiences.</p>
           <p class="price">₹19,999</p>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">
-      Book Now
-    </button>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">
+            Book Now
+          </button>
 
         </div>
       </div>
@@ -127,59 +116,61 @@
 
   <!-- booking form -->
 
-<!-- Modal Structure -->
-<div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered ">
-    <div class="modal-content ">
-      <div class="modal-header">
-        <h5 class="modal-title" id="bookingModalLabel">Book Your Trip</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  <!-- Modal Structure -->
+  <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered ">
+      <div class="modal-content ">
+        <div class="modal-header">
+          <h5 class="modal-title" id="bookingModalLabel">Book Your Trip</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="dateFrom" class="form-label">Date From</label>
+              <input type="date" class="form-control" id="dateFrom" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="destination" class="form-label">Select Destination</label>
+              <select class="form-select" id="destination" required>
+                <option selected disabled>Choose...</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Goa">Goa</option>
+                <option value="Dwarka">Dwarka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Ladakh">Ladakh</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="message" class="form-label">Special Requests</label>
+              <textarea class="form-control" id="message" rows="4"
+                placeholder="Any special requests or questions?"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-success w-100">Submit Booking</button>
+          </form>
+        </div>
       </div>
-      <div class="modal-body">
-        <form>
-          <div class="mb-3">
-            <label for="name" class="form-label">Full Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
-          </div>
-
-          <div class="mb-3">
-            <label for="email" class="form-label">Email Address</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-          </div>
-
-          <div class="mb-3">
-            <label for="phone" class="form-label">Phone Number</label>
-            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
-          </div>
-
-          <div class="mb-3">
-            <label for="dateFrom" class="form-label">Date From</label>
-            <input type="date" class="form-control" id="dateFrom" required>
-          </div>
-
-          <div class="mb-3">
-            <label for="destination" class="form-label">Select Destination</label>
-            <select class="form-select" id="destination" required>
-              <option selected disabled>Choose...</option>
-              <option value="Rajasthan">Rajasthan</option>
-              <option value="Goa">Goa</option>
-              <option value="Dwarka">Dwarka</option>
-              <option value="Kerala">Kerala</option>
-              <option value="Ladakh">Ladakh</option>
-            </select>
-          </div>
-
-          <div class="mb-3">
-            <label for="message" class="form-label">Special Requests</label>
-            <textarea class="form-control" id="message" rows="4" placeholder="Any special requests or questions?"></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-success w-100">Submit Booking</button>
-        </form>
-      </div>
+        
     </div>
-  </div>
-</div>
+  </div>
 
   <!-- destination page -->
   <section class="featured-destinations" id="destinations">
@@ -195,9 +186,9 @@
           <div class="card-content">
             <h3>Rajasthan</h3>
             <p>Royal palaces, golden deserts, and colorful culture in Jaipur, Jodhpur & Udaipur.</p>
-               <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">
-      Book Now
-    </button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">
+              Book Now
+            </button>
 
           </div>
         </div>
@@ -209,9 +200,9 @@
           <div class="card-content">
             <h3>Goa</h3>
             <p>Relax on sun-soaked beaches, enjoy seafood, and soak in Goa’s nightlife and heritage.</p>
-               <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">
-      Book Now
-    </button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">
+              Book Now
+            </button>
 
           </div>
         </div>
@@ -224,9 +215,9 @@
           <div class="card-content">
             <h3>Kerala</h3>
             <p>Explore tranquil backwaters, green hills, and Ayurvedic retreats in God's Own Country.</p>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">
-      Book Now
-    </button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">
+              Book Now
+            </button>
 
           </div>
         </div>
@@ -239,9 +230,9 @@
           <div class="card-content">
             <h3>Ladakh</h3>
             <p>Majestic mountains, Buddhist monasteries, and an unforgettable Himalayan experience.</p>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">
-      Book Now
-    </button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">
+              Book Now
+            </button>
 
           </div>
         </div>
@@ -252,23 +243,60 @@
   </section>
 
   <!-- contact page -->
-  <section class="contact-section" id="contact">
-    <div class="contact-container">
-
+<section class="contact-section shadow-sm my-5 py-5">
+  <div class="container">
+    <div class="row g-0  border-2 flex-lg-nowrap">
+      
       <!-- Contact Form -->
-      <div class="contact-form">
-        <h2>Contact Us</h2>
+      <div class="contact-form-col px-4 py-3 border-end border-2">
+        <h2 class="mb-3 text-primary">Contact Us</h2>
+        <p class="text-muted">We'd love to hear from you. Fill out the form below to get in touch.</p>
         <form>
-          <input type="text" placeholder="Name" required>
-          <input type="email" placeholder="Email" required>
-          <input type="tel" placeholder="Phone Number" required>
-          <textarea rows="5" placeholder="Your Message" required></textarea>
-          <button type="submit">Send Message</button>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label class="form-label">First Name</label>
+              <input type="text" class="form-control" placeholder="John">
+            </div>
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Last Name</label>
+              <input type="text" class="form-control" placeholder="Doe">
+            </div>
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" placeholder="email@example.com">
+            </div>
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" placeholder="+91 9876543210">
+            </div>
+            <div class="col-12 mb-3">
+              <label class="form-label">What Do You Have in Mind?</label>
+              <textarea class="form-control" rows="4" placeholder="Please enter your query..."></textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary px-4">Submit</button>
+            </div>
+          </div>
         </form>
       </div>
-    </div>
-  </section>
 
+      <!-- Contact Info -->
+      <div class="contact-info-col px-4 py-3 d-flex">
+        <h4 class="text-primary">Reach Us At</h4>
+        <p class="text-muted">Feel free to contact us directly or follow us on social media.</p>
+        <div class="mb-3"><strong>Phone:</strong> +1258 3258 5679</div>
+        <div class="mb-3"><strong>Email:</strong> hello@workik.com</div>
+        <div class="mb-3"><strong>Address:</strong> 102 street, Y Cross 485656</div>
+        <div class="mt-4">
+          <a href="#"><img class="me-2 social-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg"></a>
+          <a href="#"><img class="me-2 social-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg"></a>
+          <a href="#"><img class="me-2 social-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg"></a>
+          <a href="#"><img class="me-2 social-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
   <!-- footer section -->
 
@@ -291,6 +319,7 @@
         </div>
       </div>
     </div>
+    </div>
 
     <div class="footer-bottom">
       <p>&copy; 2025 Grand Tour. All rights reserved.</p>
@@ -304,16 +333,16 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
   <!-- Bootstrap JS (Place before </body> if not already included) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  const images = document.querySelectorAll('.slider-container img');
-  let current = 0;
+  <script>
+    const images = document.querySelectorAll('.slider-container img');
+    let current = 0;
 
-  setInterval(() => {
-    images[current].classList.remove('active');
-    current = (current + 1) % images.length;
-    images[current].classList.add('active');
-  }, 4000);
-</script>
+    setInterval(() => {
+      images[current].classList.remove('active');
+      current = (current + 1) % images.length;
+      images[current].classList.add('active');
+    }, 4000);
+  </script>
 
 </body>
 
